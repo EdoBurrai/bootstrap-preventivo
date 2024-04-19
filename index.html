@@ -37,57 +37,69 @@
     
 
     <!--Form di inserimento -->
-    <section class="text-left"> 
-        
-    <div class="container">
-    <div class="row justify-content-md-left align-items-left p-2 m-2">
-        <div class="col-sm-8">
+  <main>
+    <div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8">
+          <section class="sf-2"> 
           <h3>Richiesta Preventivo</h3> 
           <p> Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
 
-        <form id="form-add-members" action="">
+        <form id="form-prev" action="" class="needs-validation" novalidate>
         <div class="mb-3">
             <label for="name" class="form-label">Nome</label>
-            <input type="name" class="form-control" id="name" placeholder="">
+            <input type="name" class="form-control" id="name" placeholder="" required> </div>
 
+        <div class="mb-3">
             <label for="surname" class="form-label">Cognome</label>
-            <input type="surname" class="form-control" id="surname" placeholder="">
+            <input type="surname" class="form-control" id="surname" placeholder="" required> </div>
 
+        <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="">
+            <input type="email" class="form-control" id="email" placeholder="" required> </div>  
 
+        <div class="mb-3">
             <label for="job" class="form-label">Tipo di Lavoro</label>
-            <select class="form-select" aria-label="Default select example">
+            <select class="form-select" aria-label="Default select example" id="JobType" name="JobType">
                 <option selected>Seleziona tipo di lavoro</option>
-                <option value="Sviluppo backend">Sviluppo Backend</option>
-                <option value="Sviluppo frontend">Sviluppo Frontend</option>
-                <option value="Analisi progettuale">Analisi Progettuale</option>
-              </select>
-
+                <option value="BackendDev">Sviluppo Backend</option>
+                <option value="FrontendDev">Sviluppo Frontend</option>
+                <option value="ProjAnalysys">Analisi Progettuale</option>
+              </select> </div>
+ 
              
-              <div class="mb-3">
+            <div class="mb-3">
                 <label for="text" class="form-label">Textarea con Bootstrap 5</label>
                 <textarea class="form-control" id="text" rows="3"></textarea>
-
+            
                 <label for="text" class="form-label"> Codice promozzionale (opzionale)</label>
-                <textarea class="form-control" id="text" rows="1"></textarea>
-
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <textarea class="form-control" id="PromText" rows="1"></textarea>
+            
+               
+                  <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
                   <label class="form-check-label" for="flexCheckChecked"> Accetto la Privacy Policy</label>
-                </div>
-
-               <div class="col-4 mx-auto">
+                </div> 
+              
+            
+               <div class="col-mx-auto">
                 <button class="btn btn-primary" type="submit">Calcola preventivo</button>
               </div>
-            </div>
-          </div>  
-        </div> 
+            </form>
 
-    <!--Parte Statica dei contatti-->
-      <aside class="col-4">
-        <div class="col-sm-4"> 
-        <div class="card" style="width: 19rem;">
+              <div class="card border border-0">
+                <div class="text-center fs-4 fw-bold">Prezzo finale</div>
+                <div id="price-formatted" class="card-body text-center fs-4"></div>
+            </div>
+          </div>
+        </div>
+
+     
+
+
+    <!--Parte Statica dei contatti -->
+       <div class="col-lg-4 pt-1">  
+        <div class="card mb-3" style="width: 18rem;">
           <img src="./img/boolean.png" class="card-img-top" alt="BoolFactory Logo">
 
           <div class="card-body">
@@ -105,11 +117,13 @@
               </div>
             </div>
           </div>
-        </aside>
       </div>
     </div> 
-  </div> 
+  </div>  
 
+
+
+<!-- Footer-->
   <footer class="bg-dark text-center text-lg-start text-white" data-bs-theme="dark">
     <div class="text-center p-3">
       © 2024 - Tutti i diritti riservati
